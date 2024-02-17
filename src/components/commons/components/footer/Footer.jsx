@@ -12,12 +12,10 @@ const Footer = () => {
                     <div className="about">
                         <h3>MATHMATTERS</h3>
                         <p>
-                            At MathMatters, we hold the belief that everyone, no matter their age,
-                            gender, or race, possesses a natural aptitude for comprehending
-                            mathematical concepts. Based on this foundation, we aim to create a
-                            setting for learning that recognizes and fosters each persons unique
-                            abilities, encouraging them to develop their skills to the fullest
-                            extent possible.
+                            At MathMatters, we hold the belief that everyone, no matter their age, gender, or race,
+                            possesses a natural aptitude for comprehending mathematical concepts. Based on this
+                            foundation, we aim to create a setting for learning that recognizes and fosters each persons
+                            unique abilities, encouraging them to develop their skills to the fullest extent possible.
                         </p>
                     </div>
                 </div>
@@ -59,7 +57,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <div>&copy; 2023 by MathMatters. All rights reserved.</div>
+                <div>&copy; 2024 by MathMatters. All rights reserved.</div>
             </div>
         </footer>
     );

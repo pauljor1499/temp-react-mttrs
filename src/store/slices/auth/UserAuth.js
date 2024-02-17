@@ -74,19 +74,16 @@ const UserAuth = createSlice({
             })
             .addCase(_teacherRegister.rejected, (state, action) => {
                 state.isLoading = false;
-                console.log(action);
-                state.hasErrors = action.error.message;
-
-                // if (
-                //     action.error.message === "Request failed with status code 422" ||
-                //     action.error.message === "Request failed with status code 401"
-                // ) {
-                //     state.hasErrors = "Invalid credentials.";
-                // } else if (action.error.message === "Request failed with status code 400") {
-                //     state.hasErrors = "Email is already registered.";
-                // } else {
-                //     state.hasErrors = action.error.message;
-                // }
+                if (
+                    action.error.message === "Request failed with status code 422" ||
+                    action.error.message === "Request failed with status code 401"
+                ) {
+                    state.hasErrors = "Invalid credentials.";
+                } else if (action.error.message === "Request failed with status code 400") {
+                    state.hasErrors = "Email is already registered.";
+                } else {
+                    state.hasErrors = action.error.message;
+                }
             })
 
             //student
@@ -123,18 +120,16 @@ const UserAuth = createSlice({
             })
             .addCase(_studentRegister.rejected, (state, action) => {
                 state.isLoading = false;
-                state.hasErrors = action.error.message;
-
-                // if (
-                //     action.error.message === "Request failed with status code 422" ||
-                //     action.error.message === "Request failed with status code 401"
-                // ) {
-                //     state.hasErrors = "Invalid credentials.";
-                // } else if (action.error.message === "Request failed with status code 400") {
-                //     state.hasErrors = "Email is already registered.";
-                // } else {
-                //     state.hasErrors = action.error.message;
-                // }
+                if (
+                    action.error.message === "Request failed with status code 422" ||
+                    action.error.message === "Request failed with status code 401"
+                ) {
+                    state.hasErrors = "Invalid credentials.";
+                } else if (action.error.message === "Request failed with status code 400") {
+                    state.hasErrors = "Email is already registered.";
+                } else {
+                    state.hasErrors = action.error.message;
+                }
             });
     },
 });
