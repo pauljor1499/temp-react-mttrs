@@ -1,0 +1,14 @@
+.student-class-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    .student-class-list-card {
+        .student-class-image img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+}

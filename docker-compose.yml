@@ -1,0 +1,15 @@
+version: '1.0'
+
+services:
+  frontend:
+    image: vite-react-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "dev"]
