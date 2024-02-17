@@ -53,24 +53,24 @@ const Register = () => {
 
     const { values, touched, errors, handleChange, handleBlur, setFieldTouched } = useFormik({
         initialValues: {
-            firstName: "Jose",
+            firstName: "",
             middleName: "",
-            lastName: "Rizal",
-            role: "Teacher",
-            school: "Harvard University",
-            email: "teacher@gmail.com",
-            password: "Teacher123!",
-            confirmPassword: "Teacher123!",
-            contactFirstName: "Sample Fname",
+            lastName: "",
+            role: "",
+            school: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+            contactFirstName: "",
             contactMiddleName: "",
-            contactLastName: "Sample Lname",
-            contactRelationship: "Sample",
-            contactCountry: "United States",
-            contactState: "Illinois",
-            contactCity: "Chicago",
-            contactStreet: "Sample Street",
-            contactZIPCode: "12345",
-            contactPhoneNumber: "1234567890",
+            contactLastName: "",
+            contactRelationship: "",
+            contactCountry: "",
+            contactState: "",
+            contactCity: "",
+            contactStreet: "",
+            contactZIPCode: "",
+            contactPhoneNumber: "",
         },
         validationSchema: registrationValidations,
     });
@@ -88,8 +88,7 @@ const Register = () => {
         } else if (values.role == "Teacher") {
             if (!hasTeacherFieldErrors()) {
                 const isValid = verifyTeacherEmail(values.email);
-                if (!isValid) {
-                    // remove temp email
+                if (isValid) {
                     teacherRegister();
                 } else {
                     setErrorMessage("Invalid school email.");

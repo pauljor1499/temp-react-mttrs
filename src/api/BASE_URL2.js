@@ -5,4 +5,8 @@ export class BaseURL {
     usersEndpoint() {
         return `${BASE_URL}/${VERSION}/users`;
     }
+
+    classesEndpoint() {
+        return `${BASE_URL}/${VERSION}/classes`;
+    }
 }
